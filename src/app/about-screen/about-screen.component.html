@@ -1,0 +1,152 @@
+<app-header-group color="secondary">
+    <div class="row hero">
+        <div class="col-md-6">
+            <div class="float-left">
+                <div class="profile-intro">
+                    <h1 class="display-1 ">Daryl<br/>Buckle</h1>
+                </div>
+                
+                <p class="lead text-white">
+                    Chief Technology Officer at Halo Service Solutions.
+                  
+                    
+                </p>
+                <p class=" text-white">
+                    Formula 1 and Nintendo enthusiast.
+                    <br />
+                    {{age}} years old and living in Suffolk, United Kingdom.
+                </p>
+                <small class="float-left">*The background is not Suffolk.</small>
+            </div>
+        </div>
+    </div>
+</app-header-group>
+<app-group color="white" nextcolor="primary">
+    <div class="text-center tech-icons">
+        <img src="../assets/images/react.svg" title="React" alt="React">
+        <img src="../assets/images/angular.png" title="Angular" alt="Angular">
+        <img src="../assets/images/nodejs.png" title="NodeJS" alt="NodeJS">
+        <img src="../assets/images/dotnetcore.png" title=".Net Core" alt=".Net Core">
+        <img src="../assets/images/sql.png" title="MS SQL Server" alt="MS SQL Server">
+    </div>
+    <div class="hero text-primary mb-5 mt-5">
+        <h1 class="display-4 ">Coding</h1>
+        <p class="lead">Coding isn't just a job, it's a passion.</p>
+        <p>I taught myself how to code whilst working in transport, and this then lead to a career as a Software Engineer.</p>
+        <p>I am the CTO and Head of Engineering at Halo Service Solutions. At Halo, I have been able to take this passion 
+            and thrive creating business software used by hundreds of thousands of people all around the world.</p>
+        <p>React, .NET Core and MS SQL are my top skills. I also dabble into a bit of React Native and AWS every so often.</p>
+        <p>Outside of work I continue creating applications for fun. You can take a look at some of these on my portfolio page.</p>
+    </div>
+    <br/>
+    <div class="text-center">
+        <a class="btn btn-primary text-primary-text btn-lg" href="#" role="button" href="{{profile.portfolioUrl}}">See my work</a>
+    </div>
+    <br/>
+    <div class="hero text-primary text-right mb-5 mt-5">
+        <h1 class="display-4 ">Design</h1>
+        <p class="lead">There's nothing better than seeing your designs come to life.</p>
+        <p>I just love designing apps and building them. Whilst I enjoy all aspects of Full Stack Software engineering, the highlight is undoubtedly the design aspect.
+            Whether that's coming up with the architecture, deciding how features work, or User Interface design.
+        </p>
+        <p>I designed and created the HaloITSM, HaloPSA and Halo Service Desk solutions. That includes the underlying architecture, UI design and application foundations, as well as a number of features.</p>
+    </div>
+    <div class="text-center tech-icons">
+        <img src="../assets/images/react.svg" title="React" alt="React">
+        <img src="../assets/images/angular.png" title="Angular" alt="Angular">
+        <img src="../assets/images/nodejs.png" title="NodeJS" alt="NodeJS">
+        <img src="../assets/images/dotnetcore.png" title=".Net Core" alt=".Net Core">
+        <img src="../assets/images/sql.png" title="MS SQL Server" alt="MS SQL Server">
+    </div>
+</app-group>
+<app-group color="primary" nextcolor="tertiary">
+    <div class="hero text-primary-text text-center mb-5 mt-5">
+        <h1 class="display-4 mb-5">I like Orange.</h1>
+        <p class="lead text-primary-text">Orange looks so slick vs a dark or blue primary.</p>
+        <p class="text-primary-text">I get it's not everyone's cup of tea. I may well use it a bit too much...</p>
+    </div>
+</app-group>
+<app-group color="tertiary" nextcolor="white">
+    <div class="hero text-center mb-5 mt-5">
+        <h1 class="display-4 mb-5 ">A Few Favourites</h1>
+        <div class="row justify-content-center text-center">
+            <div
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-6 mb-3" 
+                *ngFor="let hobby of hobbies"
+            >
+                <div class="card hvr-grow-shadow rounded-lg lift mt-3 mb-2" title="{{hobby.name}}" >
+                    <div class="card-img" [ngStyle]="hobby.imagestyle" [style.background-image]="'url(' + hobby.image + ')'"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{hobby.name}}</h5>
+                        <p class="card-text" [innerHTML]="hobby.info"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-group>
+<app-group color="white" nextcolor="primary">
+    <div class="text-primary mb-5 mt-5 row">
+        <div class="col-md-6 pr-4 mb-4 mt-5">
+            <div class="text-primary">
+                <h1 class="display-4">My Blog</h1>
+                <p>
+                    I recently started my development blog mainly as I way of getting back into writing. It's written with <a href="https://jekyllrb.com/">Jekyll</a>.
+                </p>
+                <p>
+                    I spend a lot of time in my profession teaching junior developers and helping people learn how to code, so I thought why not take some of this online.
+                    If it helps just one person then it's been worth it!
+                </p>
+                <p>
+                    I write about my experiences as a Developer, talking about the technologies I like to use, walk-throughs and some interesting problems I've come across, as well as projects I work on. 
+                </p>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary text-primary-text btn-lg mt-3" href="#" role="button" href="{{profile.blogUrl}}">Read On</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="../assets/images/me7.jpeg" style="max-width: 100%; border-radius: 10px;" alt="Blog"/>
+        </div>
+    </div>
+</app-group>
+<app-group color="primary" nextcolor="white">
+    <div class="text-primary-text mb-5 mt-5 text-center">
+        <h1 class="display-4 mb-4">About This Site</h1>
+        <fa-icon class="mr-3 ml-3" [icon]="['fab', 'angular']" size="5x" title="Angular"></fa-icon>
+        <fa-icon class="mr-3 ml-3" [icon]="['fab', 'github']" size="5x" title="GitHub Pages"></fa-icon>
+        <fa-icon class="mr-3 ml-3" [icon]="['fab', 'bootstrap']" size="5x" title="Bootstrap"></fa-icon>
+        <br>
+        <p class="lead text-primary-text mt-4">
+            My Portfolio page is built using a template I wrote in Angular called <a class="text-primary-text" href="https://github.com/DarylBuckle/angular-dev-portfolio">angular-dev-portfolio</a>.
+        </p>
+        <p class="text-primary-text">
+            I made it initially as a way of learning Angular. The idea is all the data is structured in objects and the data resides inside a single file, "data.ts", so it is very easy to use the repository as a template and in a matter of minutes put your own data into the template. It uses Bootstrap so the theme can easily be changed in SCSS. The site has no back-end and is hosted on GitHub pages (it's free!).
+        </p>
+        <p class="text-primary-text mb-4">
+            This template is free to use. See my blog post on setting up your own portfolio page, located <a target="_blank" style="color:white; font-weight: bold;" href="{{profile.blogUrl}}/2020-08-31-create-a-portfolio-page-with-angular-dev-portfolio">here</a>.
+        </p>
+        
+    </div>
+</app-group>
+<app-group color="white" nextcolor="footer">
+    <div class="mb-5 mt-5 text-center">
+        <h1 class="display-4 mb-4">Contact Me</h1>
+        <p class="lead mt-4">
+            Ask me anything. I'm keen to broaden my network and connect with IT professionals.
+            <br>
+            <a title="Contact" class="btn btn-primary text-primary-text btn-lg mt-3" target="_blank" href="mailto:{{profile.mailto}}" role="button">
+                <fa-icon class="mr-3" [icon]="['fas', 'at']" size="lg"></fa-icon>
+                Contact
+            </a>
+        </p>
+        <div class="gallary mt-5">
+            <img src="../assets/images/me1.jpeg" alt="Me 1" />
+            <img src="../assets/images/me6.jpeg" alt="Me 2" />
+            <img src="../assets/images/me2.jpeg" alt="Me 3" />
+            <img src="../assets/images/me3.jpeg" alt="Me 4" />
+            <img src="../assets/images/me5.jpeg" alt="Me 5" />
+            <img src="../assets/images/me4.jpeg" alt="Me 6" />
+        </div>
+    </div>
+</app-group>

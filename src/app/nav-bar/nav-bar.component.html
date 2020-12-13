@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top {{nobackground}} {{navsize}}">
+    <div class="container">
+        <a id="app-home-logo" class="navbar-brand" href="{{profile.portfolioUrl}}">
+            <!--NAV BAR LOGO IS HERE (can be replaced with text)-->
+            <img style="max-width: 130px;" src="../assets/images/logo.png" alt="Daryl Buckle">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-lg-5" data-toggle="collapse" data-target=".navbar-collapse.show"> <!--data-toggle="collapse" data-target="#navbarSupportedContent"-->
+                <li class="nav-item mr-lg-3">
+                    <a class="nav-link" href="{{profile.portfolioUrl}}">Portfolio</a>
+                </li>
+                <li class="nav-item mr-lg-3">
+                    <a class="nav-link active" href="/">About</a>
+                </li>
+                <li class="nav-item mr-lg-3">
+                    <a class="nav-link" href="{{profile.blogUrl}}">Blog</a>
+                </li>
+                <a *ngIf="profile.mailto" class="bg-header-button text-header-button-text btn rounded-pill px-4 ml-lg-4" target="_blank" href="mailto:{{profile.mailto}}">Contact me</a>
+            </ul> 
+        </div>
+    </div>
+</nav>
+
+<button class="btn btn-primary text-primary-text btn-lg to-top {{showscrolltotop ? 'shown' : ''}}" href="#" role="button" (click)="scrollToTop()" title="Scroll to top">
+    <fa-icon [icon]="['fas', 'chevron-up']" size="lg"></fa-icon>
+</button>
