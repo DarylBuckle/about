@@ -17,32 +17,32 @@ export class AboutScreenComponent implements OnInit {
     {
       name: 'Coding',
       imagestyle: { 'background-position-x': 'left' },
-      image: '../assets/images/hobby6.png',
+      image: 'assets/images/hobby6.png',
     },
     {
       name: 'Formula 1',
       imagestyle: { 'background-position-x': 'center' },
-      image: '../assets/images/hobby1.jpeg',
+      image: 'assets/images/hobby1.jpeg',
     },
     {
       name: 'Nintendo',
       imagestyle: { },
-      image: '../assets/images/hobby2.jpeg',
+      image: 'assets/images/hobby2.jpeg',
     },
     {
       name: 'Running',
       imagestyle: { 'background-position-y': 'bottom' },
-      image: '../assets/images/hobby3.jpeg',
+      image: 'assets/images/hobby3.jpeg',
     },
     {
       name: 'Dungeons & Dragons',
       imagestyle: { },
-      image: '../assets/images/hobby4.jpeg',
+      image: 'assets/images/hobby4.jpeg',
     },
     {
       name: 'Snooker',
       imagestyle: { 'background-position-x': 'center' },
-      image: '../assets/images/hobby5.jpeg',
+      image: 'assets/images/hobby5.jpeg',
     }
   ];
 

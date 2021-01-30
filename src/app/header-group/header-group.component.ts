@@ -7,8 +7,12 @@ import { Component, OnInit, Input, ViewChildren, QueryList } from '@angular/core
 })
 export class HeaderGroupComponent implements OnInit {
   @Input() color: string;
+  background: string;
 
-  constructor() { }
+
+  constructor() { 
+    this.background = 'assets/images/background.jpeg';
+  }
 
   ngOnInit(): void {
   }

@@ -11,6 +11,6 @@ export const PROFILE: Profile = {
   linkedin: 'darylbuckle',
   github: 'DarylBuckle',
   mailto: 'daryl.buckle@outlook.com?subject=Contact Request',
-  portfolioUrl: baseUrl,
+  portfolioUrl: baseUrl + '/#Projects',
   blogUrl: baseUrl + '/blog'
 };
