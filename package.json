@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng deploy",
     "publish-subdir": "ng deploy --base-href=/about/"
   },
   "private": true,

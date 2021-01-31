@@ -26,7 +26,7 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (scrollOffset === 0) {
+    if (scrollOffset < 1) {
       this.nobackground = 'nobackground';
     } else {
       this.nobackground = '';
